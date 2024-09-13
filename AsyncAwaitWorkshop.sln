@@ -16,6 +16,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Async await decompiled",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDecompiled.AvaloniaApp", "02-AsyncDecompiled\AsyncDecompiled.AvaloniaApp\AsyncDecompiled.AvaloniaApp.csproj", "{E653836C-1063-4787-B04E-DBDAE37EE8B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Playground", "03 Playground", "{D13D6BA5-4D30-47E8-93BC-8359FED5B6EA}"
+	ProjectSection(SolutionItems) = preProject
+		03-Playground\docker-compose.yml = 03-Playground\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "03-Playground\WebApi\WebApi.csproj", "{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Tests", "03-Playground\WebApi.Tests\WebApi.Tests.csproj", "{6C790A14-0F6D-4CC6-B547-43401BA507FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Miscellaneous", "04 Miscellaneous", "{E41C788D-1207-4C37-9112-B516D98FF8C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "04-Miscellaneous\ConsoleApp\ConsoleApp.csproj", "{137649CC-DA52-417E-A368-55D9AD85C9D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +41,9 @@ Global
 		{DAB38EBD-8FEB-4EDD-AFFB-F7F33ABB2CA1} = {11314D7E-9555-4CE1-B995-EF6A15C39F49}
 		{DA91918D-3268-4A5C-B9CD-BC3785528672} = {11314D7E-9555-4CE1-B995-EF6A15C39F49}
 		{E653836C-1063-4787-B04E-DBDAE37EE8B1} = {5EC039EC-694E-4D86-9F96-35D4E4C9D4EF}
+		{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0} = {D13D6BA5-4D30-47E8-93BC-8359FED5B6EA}
+		{6C790A14-0F6D-4CC6-B547-43401BA507FB} = {D13D6BA5-4D30-47E8-93BC-8359FED5B6EA}
+		{137649CC-DA52-417E-A368-55D9AD85C9D7} = {E41C788D-1207-4C37-9112-B516D98FF8C0}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DAB38EBD-8FEB-4EDD-AFFB-F7F33ABB2CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +58,17 @@ Global
 		{E653836C-1063-4787-B04E-DBDAE37EE8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E653836C-1063-4787-B04E-DBDAE37EE8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E653836C-1063-4787-B04E-DBDAE37EE8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75169DE-4D64-4744-ADF5-EFD5D2BC97E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C790A14-0F6D-4CC6-B547-43401BA507FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C790A14-0F6D-4CC6-B547-43401BA507FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C790A14-0F6D-4CC6-B547-43401BA507FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C790A14-0F6D-4CC6-B547-43401BA507FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137649CC-DA52-417E-A368-55D9AD85C9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137649CC-DA52-417E-A368-55D9AD85C9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137649CC-DA52-417E-A368-55D9AD85C9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137649CC-DA52-417E-A368-55D9AD85C9D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
