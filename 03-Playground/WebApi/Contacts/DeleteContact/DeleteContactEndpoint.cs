@@ -3,10 +3,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using Serilog;
 using WebApi.Contacts.Common;
-using WebApi.DatabaseAccess;
 
 namespace WebApi.Contacts.DeleteContact;
 
@@ -18,25 +16,20 @@ public static class DeleteContactEndpoint
     }
     
     public static async Task<IResult> DeleteContact(
-        WebApiDbContext dbContext,
+        IDeleteContactDbSession dbSession,
         ILogger logger,
         Guid id,
         CancellationToken cancellationToken
     )
     {
-        var contact = await dbContext
-           .Contacts
-           .Include(c => c.Addresses)
-           .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
-        
+        var contact = await dbSession.GetContactAsync(id, cancellationToken);
         if (contact is null)
         {
             return Results.NotFound();
         }
 
-        dbContext.Addresses.RemoveRange(contact.Addresses);
-        dbContext.Contacts.Remove(contact);
-        await dbContext.SaveChangesAsync(cancellationToken);
+        dbSession.RemoveContact(contact);
+        await dbSession.SaveChangesAsync(cancellationToken);
 
         logger.Information("{@Contact} was deleted successfully", contact);
         return Results.Ok(ContactDetailDto.FromContact(contact));
