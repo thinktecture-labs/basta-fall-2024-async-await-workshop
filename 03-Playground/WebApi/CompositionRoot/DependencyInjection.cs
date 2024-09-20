@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using ProtoBuf.Grpc.Server;
 using Serilog;
-using WebApi.AsyncStreaming;
 using WebApi.CommonValidation;
 using WebApi.Contacts;
 using WebApi.DatabaseAccess;
@@ -25,7 +24,6 @@ public static class DependencyInjection
            .AddMessageBroker()
            .AddCommonValidation()
            .AddContacts()
-           .AddAsyncStreamingExample()
            .AddTransactionalOutbox()
            .AddOrders()
            .AddHealthChecks()

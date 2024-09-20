@@ -1,9 +1,7 @@
-using Microsoft.AspNetCore.Builder;
 using Serilog;
-using WebApi.Contacts;
-using WebApi.Orders;
+using WebApi.AsyncStreaming;
 
-namespace WebApi.CompositionRoot;
+namespace ReducedWebApp.CompositionRoot;
 
 public static class HttpMiddleware
 {
@@ -11,8 +9,7 @@ public static class HttpMiddleware
     {
         app.UseSerilogRequestLogging();
         app.UseRouting();
-        app.MapContactsEndpoints();
-        app.MapCompleteOrder();
+        app.MapAsyncStreamingExample();
         app.MapHealthChecks("/");
         return app;
     }

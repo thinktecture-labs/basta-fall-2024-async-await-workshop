@@ -1,7 +1,2 @@
 ﻿{
-    "asyncStreaming": {
-        "areTestsEnabled": false,
-        "consumer2CancelAfter": 10,
-        "consumer3CancelAfter": 15
-    }
 }

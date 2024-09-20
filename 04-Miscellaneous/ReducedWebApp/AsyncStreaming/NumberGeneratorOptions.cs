@@ -1,6 +1,6 @@
 ﻿using Light.GuardClauses;
 
-namespace WebApi.AsyncStreaming;
+namespace ReducedWebApp.AsyncStreaming;
 
 public sealed record NumberGeneratorOptions
 {

@@ -9,24 +9,26 @@ using Light.Xunit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProtoBuf.Grpc.Client;
+using ReducedWebApp.AsyncStreaming;
 using Serilog;
 using WebApi.AsyncStreaming;
+using WebApi.Tests.AsyncStreaming;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace WebApi.Tests.AsyncStreaming;
+namespace ReducedWebApp.Tests.AsyncStreaming;
 
 public sealed class AsyncStreamingIntegrationTests : IAsyncLifetime
 {
     private static readonly AsyncStreamingTestOptions Options =
         TestSettings.Configuration.GetSection("asyncStreaming").Get<AsyncStreamingTestOptions>()!;
-    private readonly WebApiFactory _factory;
+    private readonly WebAppFactory _factory;
     private readonly ILogger _logger;
 
     public AsyncStreamingIntegrationTests(ITestOutputHelper output)
     {
         _logger = output.CreateTestLogger();
-        _factory = new WebApiFactory(_logger);
+        _factory = new WebAppFactory(_logger);
     }
 
     [SkippableFact]
